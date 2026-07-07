@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendors I Love | Events by Steph</title>
+<meta name="description" content="A curated list of wedding vendors Steph loves and trusts — photographers, florists, caterers, and more on the North Shore of Massachusetts and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .vendors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .vendor-category {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+
+  .vendor-category-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .vendor-category-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .vendor-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vendor-item a {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 220ms ease;
+    display: block;
+  }
+
+  .vendor-item a:hover {
+    color: var(--brass-deep);
+  }
+
+  .vendor-item a::after {
+    content: ' →';
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--brass);
+    opacity: 0;
+    transition: opacity 220ms ease;
+  }
+
+  .vendor-item a:hover::after {
+    opacity: 1;
+  }
+
+  .vendor-disclaimer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    max-width: 600px;
+  }
+
+  @media (max-width: 900px) {
+    .vendors-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .vendors-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Events <span class="logo-accent">by</span> Steph</a>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="vendors-i-love.html" class="nav-link active">Vendors I Love</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-ghost nav-cta">Check Availability</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero-simple">
+    <div class="container">
+      <p class="eyebrow">Vendors I Love</p>
+      <h1>People I trust with your day.</h1>
+      <p class="lede">Finding the right vendors takes time. These are the people I've seen do great work and genuinely love recommending to couples I work with.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="vendors-grid">
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Photography</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://aliciapetitti.com/" target="_blank" rel="noopener">Alicia Petitti Photography</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Florals</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://fordflower.com/" target="_blank" rel="noopener">Ford Flower Co.</a></li>
+            <li class="vendor-item"><a href="https://nunans.com/" target="_blank" rel="noopener">Nunan Garden Center</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Catering</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.easternharvestcatering.com/" target="_blank" rel="noopener">Eastern Harvest Catering</a></li>
+            <li class="vendor-item"><a href="https://vincentbiancocatering.com/" target="_blank" rel="noopener">Vincent Bianco Catering</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Tents</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.baystatetent.com/" target="_blank" rel="noopener">Bay State Tent</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Mobile Bartending</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.thetipsytrailerconh.com/" target="_blank" rel="noopener">The Tipsy Trailer</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Desserts</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.topsfieldbakeshop.com/weddings" target="_blank" rel="noopener">The Topsfield Bakeshop</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">DJ</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.617events.com/" target="_blank" rel="noopener">617 Events</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Hair &amp; Makeup</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.thecharlotteandco.com/" target="_blank" rel="noopener">Charlotte &amp; Co</a></li>
+          </ul>
+        </div>
+
+        <div class="vendor-category">
+          <p class="vendor-category-label">Coordination</p>
+          <ul class="vendor-list">
+            <li class="vendor-item"><a href="https://www.samanthaknightevents.com/" target="_blank" rel="noopener">Samantha Knight Events</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="vendor-disclaimer">These are vendors I've personally worked with or know well enough to recommend. This list will grow as I meet more great people in the industry.</p>
+
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container section-head center">
+      <p class="eyebrow">Let's Chat</p>
+      <h2>Ready to talk about your day?</h2>
+      <div class="btn-row" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary">Check Availability</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <p class="logo footer-logo">Events <span class="logo-accent">by</span> Steph</p>
+      <p class="footer-tagline">Wedding coordination for New England celebrations.</p>
+      <p class="footer-location">Based in Georgetown, MA</p>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-area">Serving Massachusetts · New Hampshire · Maine</p>
+      <div class="footer-link-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+        <a href="mailto:steph@eventsbystephne.com" class="footer-email">steph@eventsbystephne.com</a>
+      </div>
+      <div class="footer-link-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="17.3" cy="6.7" r="0.7" fill="currentColor" stroke="none"/></svg>
+        <a href="https://instagram.com/eventsbystephne" class="footer-email" target="_blank" rel="noopener">@eventsbystephne</a>
+      </div>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Events by Steph. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
