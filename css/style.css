@@ -831,6 +831,12 @@ em {
 
 /* ----------- Responsive ----------- */
 
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
 @media (max-width: 900px) {
   .section-media {
     grid-template-columns: 1fr;
@@ -893,6 +899,10 @@ em {
 }
 
 @media (max-width: 720px) {
+  .photo-strip {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav,
   .nav-cta {
     display: none;
