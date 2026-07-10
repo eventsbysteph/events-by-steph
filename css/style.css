@@ -799,6 +799,67 @@ em {
   aspect-ratio: 5 / 4;
 }
 
+/* ---- TEST: Collage styles for homepage 'Stress Less' section ---- */
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  aspect-ratio: 5 / 4;
+}
+
+.collage-grid .photo-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -28px rgba(47, 42, 46, 0.4);
+  aspect-ratio: auto;
+}
+
+.collage-offset {
+  position: relative;
+  aspect-ratio: 5 / 4;
+}
+
+.collage-offset .photo-frame-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  height: 78%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -28px rgba(47, 42, 46, 0.4);
+  z-index: 1;
+}
+
+.collage-offset .photo-frame-accent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 42%;
+  height: 42%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(47, 42, 46, 0.5);
+  z-index: 2;
+  border: 4px solid var(--paper);
+}
+
+.collage-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  aspect-ratio: 5 / 4;
+}
+
+.collage-strip .photo-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -28px rgba(47, 42, 46, 0.4);
+  aspect-ratio: auto;
+}
+
 .card-photo {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
