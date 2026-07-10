@@ -1018,3 +1018,51 @@ em {
     grid-template-columns: 1fr;
   }
 }
+
+/* ----------- FAQ Accordion ----------- */
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(47, 42, 46, 0.12);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 32px 22px 0;
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 22px;
+  font-size: 1.3rem;
+  color: var(--brass-deep);
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: '\2212';
+}
+
+.faq-item p {
+  color: var(--ink-soft);
+  padding-bottom: 24px;
+  padding-right: 32px;
+  max-width: 640px;
+}
