@@ -898,8 +898,13 @@ em {
   gap: 16px;
 }
 
+.section-media.compact-photo {
+  grid-template-columns: 300px 1fr;
+}
+
 @media (max-width: 900px) {
-  .section-media {
+  .section-media,
+  .section-media.compact-photo {
     grid-template-columns: 1fr;
     gap: 32px;
   }
