@@ -1028,12 +1028,13 @@ em {
 
 .faq-item {
   border-bottom: 1px solid rgba(47, 42, 46, 0.12);
+  margin-bottom: 6px;
 }
 
 .faq-item summary {
   list-style: none;
   cursor: pointer;
-  padding: 22px 32px 22px 0;
+  padding: 28px 32px 28px 0;
   position: relative;
   font-family: var(--font-display);
   font-weight: 500;
@@ -1049,7 +1050,7 @@ em {
   content: '+';
   position: absolute;
   right: 0;
-  top: 22px;
+  top: 28px;
   font-size: 1.3rem;
   color: var(--brass-deep);
   transition: transform 0.2s ease;
