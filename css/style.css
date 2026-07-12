@@ -1071,45 +1071,69 @@ em {
 /* ----------- Bio Collage (About page) ----------- */
 
 .bio-collage {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.bio-collage-right {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 16px;
+  position: relative;
+  min-height: 480px;
 }
 
 .bio-collage .photo-frame {
-  height: 100%;
+  position: absolute;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 6px solid var(--paper);
+  box-shadow: 0 20px 40px -20px rgba(47, 42, 46, 0.45);
 }
 
-.bio-collage-left .photo-frame img,
-.bio-collage-right .photo-frame img {
+.bio-collage .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
+.bio-collage-photo-1 {
+  top: 0;
+  left: 0;
+  width: 62%;
+  height: 90%;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.bio-collage-photo-2 {
+  top: 4%;
+  right: 0;
+  width: 46%;
+  height: 46%;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.bio-collage-photo-3 {
+  bottom: 0;
+  right: 6%;
+  width: 40%;
+  height: 42%;
+  transform: rotate(-4deg);
+  z-index: 3;
+}
+
 @media (max-width: 720px) {
   .bio-collage {
-    grid-template-columns: 1fr;
+    min-height: 340px;
   }
 
-  .bio-collage-left .photo-frame {
-    aspect-ratio: 4 / 3;
+  .bio-collage-photo-1 {
+    width: 58%;
+    height: 100%;
   }
 
-  .bio-collage-right {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
+  .bio-collage-photo-2 {
+    width: 50%;
+    height: 38%;
   }
 
-  .bio-collage-right .photo-frame {
-    aspect-ratio: 1 / 1;
+  .bio-collage-photo-3 {
+    width: 44%;
+    height: 34%;
   }
 }
