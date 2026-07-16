@@ -937,27 +937,24 @@ em {
 
   .hero-split-image {
     width: 100%;
-    height: 320px;
+    height: auto;
     max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
 
   .hero-split-image img {
     position: static;
     display: block;
-    width: auto;
-    height: 100%;
-    max-width: none;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     object-fit: contain;
   }
 
   .hero-split-image a {
     position: static !important;
     display: block;
-    height: 100%;
-    width: max-content;
+    width: 100%;
   }
 
   .hero-split-image::before {
