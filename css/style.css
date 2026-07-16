@@ -384,6 +384,10 @@ em {
   gap: 28px;
 }
 
+.card-grid.cards-2up {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -1015,6 +1019,7 @@ em {
   }
 
   .card-grid,
+  .card-grid.cards-2up,
   .process-list {
     grid-template-columns: 1fr;
   }
