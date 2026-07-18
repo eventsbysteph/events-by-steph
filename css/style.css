@@ -170,13 +170,15 @@ em {
 }
 
 .btn-ghost {
-  border: 1px solid var(--line);
-  color: var(--ink);
+  background: var(--brass-deep);
+  border: 1px solid var(--brass-deep);
+  color: var(--paper);
 }
 
 .btn-ghost:hover {
+  background: var(--brass);
   border-color: var(--brass);
-  color: var(--brass-deep);
+  transform: translateY(-1px);
 }
 
 .btn-row {
