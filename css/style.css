@@ -170,15 +170,13 @@ em {
 }
 
 .btn-ghost {
-  background: var(--brass-deep);
-  border: 1px solid var(--brass-deep);
-  color: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .btn-ghost:hover {
-  background: var(--brass);
   border-color: var(--brass);
-  transform: translateY(-1px);
+  color: var(--brass-deep);
 }
 
 .btn-row {
@@ -186,6 +184,15 @@ em {
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 32px;
+}
+
+.section.dark .btn-primary {
+  background: var(--brass-deep);
+  color: var(--paper);
+}
+
+.section.dark .btn-primary:hover {
+  background: var(--brass);
 }
 
 /* ----------- Header / Nav ----------- */
