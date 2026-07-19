@@ -779,6 +779,45 @@ em {
   color: var(--accent);
 }
 
+.policy-content h3 {
+  margin-top: 36px;
+  margin-bottom: 10px;
+}
+
+.policy-content h3:first-of-type {
+  margin-top: 0;
+}
+
+.policy-content p {
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.policy-content ul {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policy-content ul li {
+  line-height: 1.7;
+  color: var(--ink-soft);
+  padding-left: 20px;
+  position: relative;
+}
+
+.policy-content ul li::before {
+  content: '—';
+  color: var(--brass);
+  position: absolute;
+  left: 0;
+}
+
+.policy-content ul li strong {
+  color: var(--ink);
+}
+
 /* ----------- Reveal on scroll ----------- */
 
 .reveal {
