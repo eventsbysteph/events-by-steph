@@ -186,6 +186,10 @@ em {
   margin-top: 32px;
 }
 
+.section.dark .section-head {
+  margin-bottom: 0;
+}
+
 .section.dark .btn-primary {
   background: var(--brass-deep);
   color: var(--paper);
