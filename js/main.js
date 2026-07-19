@@ -2,6 +2,54 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // Cookie consent + gated analytics loading
+  (function () {
+    var STORAGE_KEY = 'eventsbysteph-cookie-consent';
+
+    function loadAnalytics() {
+      if (!window.GA_MEASUREMENT_ID || window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', window.GA_MEASUREMENT_ID);
+    }
+
+    var stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === 'accepted') {
+      loadAnalytics();
+      return;
+    }
+    if (stored === 'declined') {
+      return;
+    }
+
+    // No prior choice — show the banner
+    var banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML =
+      '<p class="cookie-banner-text">This site uses cookies to understand how visitors find and use it. ' +
+      '<a href="/privacy/">Learn more</a>.</p>' +
+      '<div class="cookie-banner-actions">' +
+      '<button type="button" class="btn btn-ghost cookie-decline">Decline</button>' +
+      '<button type="button" class="btn btn-primary cookie-accept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    banner.querySelector('.cookie-accept').addEventListener('click', function () {
+      localStorage.setItem(STORAGE_KEY, 'accepted');
+      banner.remove();
+      loadAnalytics();
+    });
+
+    banner.querySelector('.cookie-decline').addEventListener('click', function () {
+      localStorage.setItem(STORAGE_KEY, 'declined');
+      banner.remove();
+    });
+  })();
+
   // Mobile nav toggle
   var header = document.getElementById('site-header');
   var toggle = document.getElementById('nav-toggle');

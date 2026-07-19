@@ -761,6 +761,24 @@ em {
   color: rgba(255, 251, 246, 0.5);
 }
 
+.footer-copy a {
+  color: rgba(255, 251, 246, 0.7);
+}
+
+.footer-copy a:hover {
+  color: var(--paper);
+}
+
+.policy-content a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.policy-content a:hover {
+  color: var(--accent);
+}
+
 /* ----------- Reveal on scroll ----------- */
 
 .reveal {
@@ -1166,5 +1184,73 @@ em {
   .bio-collage-photo-3 {
     width: 44%;
     height: 34%;
+  }
+}
+
+/* ----------- Cookie consent banner ----------- */
+
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 20px 40px -12px rgba(47, 42, 46, 0.45);
+}
+
+.cookie-banner-text {
+  font-size: 0.9rem;
+  color: rgba(255, 251, 246, 0.85);
+  margin: 0;
+  flex: 1 1 260px;
+}
+
+.cookie-banner-text a {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-banner .btn {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+}
+
+.cookie-banner .btn-ghost {
+  border-color: rgba(255, 251, 246, 0.35);
+  color: var(--paper);
+}
+
+.cookie-banner .btn-ghost:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+@media (max-width: 560px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cookie-banner-actions {
+    justify-content: center;
   }
 }
