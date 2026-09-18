@@ -120,13 +120,38 @@
           </div>
 
           <div class="form-field">
-            <label for="location">Location <span class="required-mark">*</span></label>
-            <input type="text" id="location" name="location" placeholder="City or venue name" required>
+            <label for="guest-count">Number of Guests <span class="required-mark">*</span></label>
+            <input type="text" id="guest-count" name="guest-count" placeholder="Approximate is fine" required>
+          </div>
+
+          <div class="form-row-double">
+            <div class="form-field">
+              <label for="ceremony-location">Ceremony Location <span class="required-mark">*</span></label>
+              <input type="text" id="ceremony-location" name="ceremony-location" placeholder="Venue name or address" required>
+            </div>
+            <div class="form-field">
+              <label for="reception-location">Reception Location</label>
+              <input type="text" id="reception-location" name="reception-location" placeholder="Leave blank if same as ceremony">
+            </div>
           </div>
 
           <div class="form-field">
-            <label for="message">Tell me about your day <span class="required-mark">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="Venue, guest count, what kind of support you're looking for..." required></textarea>
+            <label for="referral-source">How did you hear about me?</label>
+            <select id="referral-source" name="referral-source">
+              <option value="" disabled selected>--</option>
+              <option value="Google search">Google search</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Referral from a friend or family member">Referral from a friend or family member</option>
+              <option value="Referral from a vendor">Referral from a vendor</option>
+              <option value="Wedding venue">Wedding venue</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Tell me more about the help you need <span class="required-mark">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Planning services, rehearsal dinner, day-of coordination, etc." required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary">Send Inquiry</button>
